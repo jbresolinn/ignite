@@ -1,0 +1,56 @@
+@use '../../styles/design-system.scss' as ds;
+
+.container {
+  height: 5rem;
+  border-bottom: 1px solid ds.$gray-800;
+
+  > div {
+    max-width: 1120px;
+    height: 5rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    
+    display: flex;
+    align-items: center;
+
+    nav {
+      margin-left: 5rem;
+      height: 5rem;
+
+      a {
+        display: inline-block;
+        position: relative;
+        padding: 0 0.5rem;
+        height: 5rem;
+        line-height: 5rem;
+        color: ds.$gray-300;
+        transition: color .3s;
+
+        & + a {
+          margin-left: 2rem;
+        }
+
+        &:hover {
+          color: ds.$white-100;
+        }
+
+        &.active {
+          color: ds.$white-100;
+          font-weight: bold;
+
+          &::after {
+            content: '';
+            display: block;
+            height: 3px;
+            border-radius: 3px 3px 0 0;
+            width: 100%;
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            background: ds.$yellow-500;
+          }
+        } 
+      }
+    }
+  }
+}

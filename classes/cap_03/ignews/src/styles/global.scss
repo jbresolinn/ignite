@@ -1,17 +1,4 @@
-// media variables
-$tablet: 'max-width: 1080px';
-$mobile: 'max-width: 720px';
-
-// colors
-$white-100: #ffffff;
-
-$gray-100: #e1e1e6;
-$gray-300: #a8a8b3;
-$gray-900: #121214;
-
-$cyan-500: #61DAFB;
-
-$yellow-500: #eba417;
+@use './design-system.scss' as ds;
 
 * {
   margin: 0;
@@ -19,13 +6,13 @@ $yellow-500: #eba417;
   box-sizing: border-box;
 }
 
-@media ($tablet) {
+@media (ds.$tablet) {
   html {
     font-size: 93.75%;
   }
 }
 
-@media ($mobile) {
+@media (ds.$mobile) {
   html {
     font-size: 87.5%;
   }
@@ -33,8 +20,8 @@ $yellow-500: #eba417;
 
 
 body {
-  background: $gray-900;
-  color: $white-100;
+  background: ds.$gray-900;
+  color: ds.$white-100;
 }
 
 body, input, textarea, select, button {
