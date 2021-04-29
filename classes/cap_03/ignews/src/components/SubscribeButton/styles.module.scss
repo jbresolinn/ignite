@@ -1,0 +1,22 @@
+@use '../../styles/design-system.scss' as ds;
+
+.button {
+  height:4rem;
+  width: 260px;
+  border: 0;
+  border-radius: 2rem;
+  background: ds.$yellow-500;
+  color: ds.$gray-900;
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: filter .3s;
+
+  &:hover {
+    filter: brightness(.8);
+  }
+}
